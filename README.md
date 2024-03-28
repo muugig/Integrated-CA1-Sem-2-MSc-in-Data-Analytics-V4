@@ -6,7 +6,6 @@
 - [Installation and Setup](#Installation and Setup)
 - [Project Overview](#project-overview)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Data](#data)
 - [Model](#model)
 - [Results](#results)
@@ -70,21 +69,34 @@ cd your-project-folder
 pip install -r requirements.txt
 ```
 
-## Usage
-Describe how to use your project, including any scripts to run or commands needed to train the model, generate predictions, or visualize results. For instance:
-
-```bash
-python train_model.py
-```
 
 ## Data
-Provide an overview of the data used in this project. Mention the source of your data, its characteristics, and how it has been preprocessed or transformed for your modeling needs.
-
+takken from kaggle ml-100k
 ## Model
-Detail the architecture of your neural network, including the rationale behind design choices, the frameworks and libraries used (e.g., TensorFlow, Keras), and any significant parameters or hyperparameters.
+The implementation of the NCF model demonstrates notable effectiveness in predicting user ratings for movies, with a final test loss indicating the model's accuracy. The conversion of ratings to a binary like/dislike format and subsequent confusion matrix analysis provide additional insight into the model's practical utility in a recommendation system context. This approach underscores the potential of deep learning in enhancing the personalization and accuracy of Recommendation Systems, particularly when handling sparse and large-scale datasets. 
+
 
 ## Results
-Summarize the results obtained from your model, including performance metrics, analysis, and any visualizations that help illustrate the model's effectiveness in addressing the project's goals.
+Results Visualization:
+
+The plot delineating the preparation and approval misfortune over ages is created, showing the model's learning progress and intermingling conduct.
+    • Loss: The y-axis represents the loss, which is a measure of how well the model is performing. A lower misfortune shows a superior attack of the model to the information.
+    • Epochs: The x-axis indicates the epochs, showing the number of complete passes the machine learning algorithm has made through the entire training dataset.
+    • Training Loss (Blue Line): This line shows the model's loss on the training set. We observe a sharp decline from the start, indicating that the model quickly learned from the initial state of relative ignorance about the data patterns.
+    • Validation Loss (Orange Line): This line represents the loss on a validation set, which is separate from the data the model is trained on and is used to simulate the model's performance on unseen data. The approval misfortune diminishes and begins to smooth as the ages increment, recommending that the model is summing up well as opposed to overfitting.
+    • Convergence: The two lines are converging, which is an indicator that the model is not overfitting the training data. Overfitting would be obvious in the event that the preparation misfortune kept on diminishing while the approval misfortune began to increment.
+    • Stability: By the final epoch, both the training and validation loss values show little change, indicating that the model may have reached a point where further training will not result in significant improvements. This is where you'd consider stopping the training to prevent unnecessary computation and potential overfitting.
+
+
+Prediction and Evaluation:
+
+        ◦ Predictions are made on the test set, and a threshold of 3.5 is applied to convert continuous ratings into binary likes/dislikes.
+        ◦ A confusion matrix is plotted to visualize the model's performance in categorizing the binary outcomes.
+
+    • True Positive (TP) - Bottom Right: The model predicted the positive class correctly. In this case, there are 8221 instances where the model accurately predicted the class labeled '1'.
+    • True Negative (TN) - Top Left: The model predicted the negative class correctly. There are 6020 instances where the model correctly predicted the class labeled '0'.
+    • False Positive (FP) - Bottom Left: The model incorrectly predicted the positive class. This means that there are 2769 instances where the model predicted the class as '1', but it was actually '0'.
+    • False Negative (FN) - Top Right: The model incorrectly predicted the negative class. There are 2990 instances where the model predicted the class as '0', but it was actually '1'.
 
 ## Contributing
 If you're open to contributions, specify how others can contribute to your project. Outline any requirements for contributions, such as coding standards or testing procedures.
