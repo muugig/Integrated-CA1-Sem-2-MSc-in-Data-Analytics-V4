@@ -71,7 +71,7 @@ pip install -r requirements.txt
 
 
 ## Data
-takken from kaggle ml-100k
+takken from kaggle ml-100k.
 ## Model
 The implementation of the NCF model demonstrates notable effectiveness in predicting user ratings for movies, with a final test loss indicating the model's accuracy. The conversion of ratings to a binary like/dislike format and subsequent confusion matrix analysis provide additional insight into the model's practical utility in a recommendation system context. This approach underscores the potential of deep learning in enhancing the personalization and accuracy of Recommendation Systems, particularly when handling sparse and large-scale datasets. 
 
@@ -99,13 +99,12 @@ Prediction and Evaluation:
     • False Negative (FN) - Top Right: The model incorrectly predicted the negative class. There are 2990 instances where the model predicted the class as '0', but it was actually '1'.
 
 ## Contributing
-If you're open to contributions, specify how others can contribute to your project. Outline any requirements for contributions, such as coding standards or testing procedures.
+you're open to contributions, specify how others can contribute to your project. Outline any requirements for contributions, such as coding standards or testing procedures.
 
 ## License
 State the license under which your project is released, allowing others to know how they can use, modify, or distribute your work.
 
 ## Contact
-Provide your contact information or that of the project team for anyone who has questions or needs support. For example:
 - email : igerlee63@gmail.com
 - Email: [igerlee63@gmail.com)
 - Project Link: [https://github.com/muugig/Integrated-CA1-Sem-2-MSc-in-Data-Analytics-V4/tree/master)
